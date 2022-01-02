@@ -14,7 +14,14 @@
       </tr>
     </thead>
     <tbody>
-      <tr></tr>
+      <tr v-for="item in products":key="temp.id" v-bind:class="{'table-success':item.onStock}"></tr>
+      <td>{{temp.name}}</td>
+      <td><img v-bind:src="temp.imageUrl" alt=""></td>
+      <td><input type="checkbox" value="" v-model="temp.onStock">
+      {{temp.onStock}}</td>
+      <td>
+        <button type="button" class="btn btn-outline-primary">編輯</button>
+      </td>
     </tbody>
   </table>
   <form>

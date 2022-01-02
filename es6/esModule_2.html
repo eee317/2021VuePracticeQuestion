@@ -14,7 +14,16 @@ window.b = 2;
 // 網路上找到的 “ESM”，如果條件允許是可以使用 import 方式載入
 // https://cdnjs.com/libraries/vue
 // 比對語法：https://v3.vuejs.org/guide/introduction.html#declarative-rendering
+import { createApp} from 'https://cdnjs.cloudflare.com/ajax/libs/vue/3.2.26/vue.esm-browser.min.js'
+const Counter = {
+  data() {
+    return {
+      counter: 5
+    }
+  }
+}
 
+Vue.createApp(Counter).mount('#app')
 
 </script>
 <!-- 🙇🙇練習結束🙇🙇 -->
