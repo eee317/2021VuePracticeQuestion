@@ -72,6 +72,22 @@ const App = {
       this.carts.push(product)
     },
   },
+  computed:{
+    //新增total的值，會把結果渲染到畫面上
+    total(){
+      let total=0;
+      this.carts.forEach(item=>{
+        total+=item.price;
+      })
+      return total;
+    },
+    filterProducts(){
+      return this.products.filter(item=>{
+        console.log(item)
+        return item.name.match(this.search)
+      })
+    }
+  },
   created() {
     console.log(this);
   }

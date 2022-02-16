@@ -9,7 +9,7 @@
   <card>
     <template v-slot:default="slotPropt">
       我想取出元件的值來使用
-      {{slotPropt.product}}
+      {{slotPropt.product.name}}
     </template>
   </card>
   <hr>
@@ -19,7 +19,9 @@
     <template #header>
       買早餐
     </template>
-    <template #default>
+    <template #default="{product, veganName}">
+      {{product}}
+      {{veganName}}
     </template>
   </card2>
 </div>
